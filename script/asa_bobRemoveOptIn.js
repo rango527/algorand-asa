@@ -20,7 +20,7 @@ let client = new algosdk.Algodv2(token, server, port);
     let revocationTarget = undefined;
     let closeRemainderTo = aliceAddress;
     let note = undefined;
-    let amount = 200000;
+    let amount = 0;
     let txn = algosdk.makeAssetTransferTxnWithSuggestedParams(sender, recipient, closeRemainderTo, revocationTarget,
         amount,  note, assetID, params);
     let rawSignedTxn = txn.signTxn(bobAccount.sk)
